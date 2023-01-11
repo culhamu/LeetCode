@@ -92,17 +92,18 @@ public class MDA5 {
         //				Diapers   Tissues   Toilet Papers   Paper Towels
         //				Water    Pepsi    Arizona Tea    Fanta   Coke
 
+        boolean kontrol=true;
         for (int i = 0; i < items.length; i++) {
             for (int j = 0; j < items[i].length; j++) {
 
                if (items[i][j].trim().equals("Tissues")){
                    System.out.println("Tissues ["+i+"] ve ["+j+"] index'inde bulundu");
-                   break;
+                   kontrol=false;
                }
 
             }
 
-        }System.out.println("Tissues bulunamadı");
+        }if (kontrol) System.out.println("Tissues bulunamadı");
 
 
         items[1][2]="Paper";

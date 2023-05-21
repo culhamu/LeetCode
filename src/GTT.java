@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class GTT {
     public static void main(String[] args) {
 
@@ -23,5 +25,21 @@ public class GTT {
         a=10;
         System.out.println(+ ++a);
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Bir yıl girin: ");
+
+        if (scanner.hasNextInt()) {
+            int yil = scanner.nextInt();
+
+            if (yil % 4 == 0 && (yil % 100 != 0 || yil % 400 == 0)) {
+                System.out.println(yil + " bir artık yıldır.");
+            } else {
+                System.out.println(yil + " bir artık yıl değildir.");
+            }
+        } else {
+            System.out.println("Geçersiz giriş! Lütfen bir sayı girin.");
+        }
     }
+
+
 }
